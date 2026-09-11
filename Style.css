@@ -1,0 +1,478 @@
+:root {
+    --bg-dark: #070b12;
+    --card-bg: #0f172a;
+    --gold: #d4af37;
+    --red-brand: #dc2626;
+    --silver: #94a3b8;
+    --white: #ffffff;
+    --green-btn: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+    background: rgba(7, 11, 18, 0.95);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Quadrados Vermelho e Prata inspirados na logo */
+.logo-box {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.red-sq {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #ef4444, #991b1b);
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.silver-sq {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #cbd5e1, #64748b);
+    border-radius: 4px;
+    bottom: 0;
+    right: 0;
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: var(--gold);
+}
+
+.btn-top-cart {
+    color: var(--white);
+    font-size: 1.2rem;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HERO SECTION */
+.hero-section {
+    padding: 40px 0;
+    background: radial-gradient(circle at top, #1e293b 0%, var(--bg-dark) 70%);
+    text-align: center;
+}
+
+.subtitle-top {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.main-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.credito-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 450px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+}
+
+.credito-icon {
+    font-size: 1.5rem;
+    color: var(--gold);
+    background: rgba(212, 175, 55, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.credito-info p {
+    font-size: 0.95rem;
+}
+
+.credito-info strong {
+    color: var(--gold);
+}
+
+.credito-info small {
+    color: var(--silver);
+    font-size: 0.8rem;
+}
+
+.garantia-box {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(15, 23, 42, 0.9));
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 450px;
+    margin: 0 auto 25px auto;
+}
+
+.garantia-tag {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #f87171;
+    font-weight: bold;
+}
+
+.garantia-box h2 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-top: 4px;
+}
+
+/* TABELA */
+.tabela-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.tabela-container h3 {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+    font-size: 0.9rem;
+    padding: 12px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.lucro-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.lucro-table th {
+    background: rgba(0,0,0,0.3);
+    color: var(--silver);
+    padding: 10px;
+    font-weight: 600;
+}
+
+.lucro-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.lucro-table tr:last-child td {
+    border-bottom: none;
+}
+
+.frase-efeito {
+    font-size: 0.75rem;
+    color: var(--silver);
+    letter-spacing: 1px;
+}
+
+/* SEÇÃO SERVIÇOS */
+.servicos-section {
+    padding: 50px 0;
+    background: #05080c;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--silver);
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.card-img-holder {
+    height: 140px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.imovel-bg {
+    background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80');
+}
+
+.pesado-bg {
+    background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80');
+}
+
+.service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--gold);
+}
+
+.service-card p {
+    font-size: 0.85rem;
+    color: var(--silver);
+    margin-bottom: 15px;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background: var(--green-btn);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* QUEM SOU EU */
+.about-section {
+    padding: 50px 0;
+    background: var(--bg-dark);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.about-text p {
+    font-size: 0.9rem;
+    color: var(--silver);
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.features-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--silver);
+}
+
+.features-list i {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.features-list strong {
+    color: var(--white);
+}
+
+.quote-box {
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid var(--gold);
+    padding: 12px 15px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--gold);
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 25px;
+}
+
+.servopa-badge {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge-logo {
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.servopa-badge strong {
+    font-size: 0.85rem;
+    display: block;
+}
+
+.servopa-badge p {
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.about-profile-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    margin: 0 auto 15px auto;
+}
+
+.about-profile-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.profile-sub {
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.profile-mission {
+    font-size: 0.85rem;
+    color: var(--silver);
+}
+
+/* RODAPÉ / CONTATO */
+.footer-section {
+    background: #05080c;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.footer-content-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.footer-content-box p {
+    font-size: 0.8rem;
+    color: var(--silver);
+    margin-bottom: 10px;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--green-btn);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    border-top: 1px solid rgba(255,255,255,0.03);
+    padding-top: 15px;
+}
+
+/* Responsivo para telas maiores */
+@media (min-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+    }
+    .main-title {
+        font-size: 2.2rem;
+    }
+}
